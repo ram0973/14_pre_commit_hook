@@ -1,50 +1,20 @@
-# Решение задачи [№14](https://devman.org/challenges/14/) с сайта [devman.org](https://devman.org)
-
-## Условие задачи:
-
-Надо автоматически запускать тесты. В нашем проекте по решению квадратного 
-уравнения 8 разработчиков и некоторые из них постоянно забывают проверить, 
-не сломали ли их изменения тесты. Они ломают!
-
-Последствия сломанных тестов катастрофические: квадратные уравнения 
-решаются неправильно, пятиклассники негодуют и жалуются на нас инвесторам. 
-Мы терям деньги.
-
-Необходимо, чтобы при попытке сделать коммит тесты запускались сами и, 
-если они сломались, коммит не делался.
-
-Нужно сделать pre commit hook, положить его в репозиторий и описать, 
-как им пользоваться. Такие файлы принято называть pre-commit, 
-давай не изменять традициям.
-
-## Системные требования
-
+# Task [№14](https://devman.org/challenges/14/) from [devman.org](https://devman.org)
+## Requirements
 ```
 Python 3.5.2+
 ```
-
-## Установка
-
+## Setup
 ```    
 git clone https://github.com/ram0973/14_pre_commit_hook.git
-(Linux)
 cp pre-commit .git/hooks
 chmod +x .git/hooks/post-commit
-(Windows)
-copy pre-commit-win .git\hooks\pre-commit
 ```
-    
-## Описание работы
-
-Если тесты выявят ошибки, коммит будет отменён
-
-## Запуск
-
+## Description
+If the tests reveals an error, the commit will be canceled
+## Usage
 ```
 cd 14_pre_commit_hook
 git commit -m "Some commit message"
 ```
- 
-## Лицензия
-
+## License
 [MIT](http://opensource.org/licenses/MIT)

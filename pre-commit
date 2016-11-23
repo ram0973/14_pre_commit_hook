@@ -1,11 +1,11 @@
 #!/bin/sh
 python3 tests.py
-error=$? # Код возврата предыдущей команды
+error=$?
 if [ "$error" -eq 0 ]
 then
-    echo "Кажется, всё в порядке. Коммитим"
+    echo "Tests passed. Commiting"
     exit 0
 else
-    echo "Тесты не прошли проверку. Коммитить не будем"
+    echo "Tests not passed. Commit cancelled"
     exit 1
 fi
